@@ -3,7 +3,7 @@
 
 from jinja2 import FileSystemLoader, Environment
 
-NUM = 5
+NUM = 3
 
 def main():
     """Main function."""
@@ -16,10 +16,15 @@ def main():
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
         form_url="https://script.google.com/macros/s/AKfycbxv5miv2EPA05UOW8J-SDhmU8815_bGmtHRsLHnYBRMGhvqJLMnwnEctvY86yFozcA6OQ/exec",
+        # 总共NUM=3个问题，每个问题2个选项
         questions=[{
                     "title" : "Question " + str(i),
-                    "audio_paths": ["wavs/q"+str(i)+"/test1.wav","wavs/q"+str(i)+"/test2.wav","wavs/q"+str(i)+"/test3.wav","wavs/q"+str(i)+"/test4.wav","wavs/q"+str(i)+"/test5.wav"],
-                    "name": "q" + str(i)} for i in range(1,NUM+1)]
+                    "audio_paths": ["wavs/q"+str(i)+"/test1.wav",
+                                    "wavs/q"+str(i)+"/test2.wav"],
+                    "name": "q" + str(i)
+                    } 
+                    for i in range(1,NUM+1)
+                    ]
     )
     with open("rendered_mos_v2.html", "w", encoding="utf-8") as f:
         f.write(html)

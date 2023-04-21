@@ -21,15 +21,6 @@
 
     <div class="container" id="form_container">
         <form id="theForm" action="{{ form_url }}" method="GET" onsubmit="return preventRepeatedSubmission();">
-            <div class="form-group">
-                <label for="name">姓名：</label>
-                <input class="form-control" type="text" inputmode="text" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="mail">电子邮件：</label>
-                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
-            </div>
-
             {% block form_questions %}{% endblock %}
             <input type="text" name="formid" value="{{ form_id }}" hidden>
             <input type="text" name="thank" value="再次感谢您参加本实验！" hidden>
