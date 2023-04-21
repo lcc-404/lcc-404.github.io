@@ -3,7 +3,7 @@
 
 from jinja2 import FileSystemLoader, Environment
 
-NUM = 40
+NUM = 5
 
 def main():
     """Main function."""
