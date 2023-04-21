@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{{ page_title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="jquery.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            {% block heading %}{% endblock %}
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="{{ form_url }}" method="GET" onsubmit="return preventRepeatedSubmission();">
+            {% block form_questions %}{% endblock %}
+            <input type="text" name="formid" value="{{ form_id }}" hidden>
+            <input type="text" name="thank" value="Thank you again for participating in this experiment!" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="SUBMIT" id="submitBtn">
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; HCMUT</p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
+</html>

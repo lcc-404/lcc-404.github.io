@@ -1,203 +1,1957 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
+    <title>MOS Experiment Form 1</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>音乐自动生成评估</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="jquery.min.js"></script>
+    <script src="./script.js"></script>
+</head>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>刘成同学的毕设</h1>
-        <p>1911553</p>
-        <p class="view"><a href="http://github.com/orderedlist/minimal">View the Project on GitHub <small>orderedlist/minimal</small></a></p>
-      </header>
-      <section>
-        <h1>毕设结果评测网页</h1>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            
+    <h1 class="display-4">Comparative MOS Experiment</h1>
+    <p class="lead">Evaluate the quality of speech synthesis</p>
+    <hr class="my-4">
+    <p>
+        Thank you for participating in this experiment!
+    </p>
+    <p>
+        In this experiment, we use a computer to synthesize human speech. You are asked to listen and <b>compare how natural (i.e. human sounding) is the second recording compared to the first?</b> Please focus on the naturalness of prosody and rythm (pitch, energy, ...) and audio quality (noise, sound clarity, timbre, ...).
+        <br><b>If the fist audio sound more natural, your score should be negative, and vice versa.</b>
+        <ul>
+            <li>3（Much better)</li>
+            <li>2（Better)</li>
+            <li>1（Slightly better)</li>
+            <li>0（About the same)</li>
+            <li>-1（Slightly worse)</li>
+            <li>-2（Worse)</li>
+            <li>-3（Much worse)</li>
+        </ul>
+        Note that the order of the audios appeared in each question is randomized.
+    </p>
 
-        <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>
-
-        <p>这里是一些文字</p>
-
-
-        <h2>对以下两个音频分别打分</h2>
-
-        <table>
-          <tbody>
-            <tr>
-              <th>ID</th>
-              <th>音频1</th>
-              <th>音频2</th>
-            </tr>
-            <tr>
-              <td>旋律</td>
-              <td>Tom Preston-Werner</td>
-              <td>Awesome</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Albert Einstein</td>
-              <td>Nearly as awesome</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="card-body">
-          <span>
-            <audio controls="" src="./audio/example.mp3" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
-          </span>
-          <span>
-            <audio controls="" src="./audio/out5.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-          </span>
-          <div class="form-check">
-              <li>
-              <input class="form-check-input" type="radio" name="q1_1" id="q1_1_9" value="1" required="">
-              <span>1</span>
-              </li>
-              <li>
-                <input class="form-check-input" type="radio" name="q1_1" id="q1_1_7" value="2" required="">
-                <span>2</span>
-              </li>
-              <li>
-                  <input class="form-check-input" type="radio" name="q1_1" id="q1_1_5" value="3" required="">
-                  <span>3</span>
-              </li>
-              <li>
-                  <input class="form-check-input" type="radio" name="q1_1" id="q1_1_3" value="4" required="">
-                  <span>4</span>
-              </li>
-              <li>
-                  <input class="form-check-input" type="radio" name="q1_1" id="q1_1_1" value="5" required="">
-                  <span>5</span>
-              </li>
-          </div>
         </div>
-        <p>In addition to the changes in the previous section, certain references are auto-linked:</p>
-
-        <ul>
-          <li>SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2</li>
-          <li>User@SHA ref: <a href="https://github.com/mojombo/product/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo@<tt>be6a8cc</tt></a></li>
-          <li>User/Project@SHA: <a href="https://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo/god@<tt>be6a8cc</tt></a></li>
-          <li>#Num: <a href="https://github.com/github/product/issues/1" class="issue-link" title="Baseline: What is up in the air right now?">#1</a></li>
-          <li>User/#Num: mojombo#1</li>
-          <li>User/Project#Num: <a href="https://github.com/mojombo/god/issues/1" class="issue-link" title="The server is not available (or you do not have permissions to access it)">mojombo/god#1</a></li>
-        </ul>
-
-        <p>These are dangerous goodies though, and we need to make sure email addresses don't get mangled:</p>
-
-        <p>My email addy is <a href="mailto:tom@github.com">tom@github.com</a>.</p>
-
-
-        <h2>无序号列表</h2>
-
-        <p>The above header should be an H2 tag. Now, for a list of fruits:</p>
-
-        <ul>
-          <li>Red Apples</li>
-          <li>Purple Grapes</li>
-          <li>Green Kiwifruits</li>
-        </ul>
-
-        <p>有序号列表</p>
-
-        <ol>
-          <li>
-            <p>This is a list item with two paragraphs. Lorem ipsum dolor<br>
-            sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>
-            mi posuere lectus.</p>
-
-            <p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>
-            vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>
-            sit amet velit.</p>
-          </li>
-          <li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
-        </ol>
-
-        <p>关于代码块 <strong>和字体加粗</strong> </p>
-
-        <ol>
-          <li>
-            <p>In Ruby you can map like this:</p>
-
-            <pre><code>['a', 'b'].map { |x| x.uppercase }</code></pre>
-          </li>
-          <li>
-            <p>In Rails, you can do a shortcut:</p>
-
-            <pre><code>['a', 'b'].map(&amp;:uppercase)</code></pre>
-          </li>
-        </ol>
-
-        <p>Some people seem to like definition lists</p>
-
-        <dl>
-          <dt>Lower cost</dt>
-          <dd>The new version of this product costs significantly less than the previous one!</dd>
-          <dt>Easier to use</dt>
-          <dd>We've changed the product so that it's much easier to use!</dd>
-        </dl>
-
-        <h2>代码块</h2>
-
-        <pre><code>&lt;div class="footer"&gt;
-    &amp;copy; 2004 Foo Corporation
-&lt;/div&gt;
-</code></pre>
-
-        <h2>Playing the blame game</h2>
-
-        <p>引用</p>
-
-        <blockquote>
-        <p>I don't want to sound like<br>
-        I have made no mistakes. I'm confident I have. I just haven't - you<br>
-        just put me under the spot here, and maybe I'm not as quick on my feet<br>
-        as I should be in coming up with one.</p>
-        </blockquote>
-
-        <h2>插入表格</h2>
-
-        <table>
-          <tbody>
-        <tr>
-            <th>ID</th>
-        <th>Name</th>
-        <th>Rank</th>
-          </tr>
-          <tr>
-            <td>1</td>
-        <td>Tom Preston-Werner</td>
-        <td>Awesome</td>
-          </tr>
-          <tr>
-            <td>2</td>
-        <td>Albert Einstein</td>
-        <td>Nearly as awesome</td>
-          </tr>
-        </tbody>
-        </table>
-
-        <h2>Crazy linking action</h2>
-
-        <p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from<br>
-        <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbz2o2oo_hfz7Tld2wehD9duMYaD47nwsJKJrza6RO-t-w4eXxi_emmidLYc5z5kR8HxmQ/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+            
+    
+        <div class="card form-group" id="q1">
+            <div class="card-header" >Question 1</div>
+            <div class="card-body">
+                <b>Transcript: </b>adring ksoâ jeân pheâ thu ñei ñông rim moâ hinh chi hoâi jôh tôgum aên 5 mai oh hrat tônap lôm chi hoâi vei tôgum choh jang
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q1/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q1/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q2">
+            <div class="card-header" >Question 2</div>
+            <div class="card-body">
+                <b>Transcript: </b>bi araê hnam oei naê ma oei tam tômöt bri bi ôi ñoâ sa naê ma yöal arih nhô hla nhem mum bri ka lôm ñak chôñieâng jö kôjaêp nöih sôngöm tôpaê tia ñang tia naê hoâ truh atuoâch lôm tôdrong jit taây ñuoâi my
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q2/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q2/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q3">
+            <div class="card-header" >Question 3</div>
+            <div class="card-body">
+                <b>Transcript: </b>tôjung pôm glong pônhroh pônhroh cu the
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q3/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q3/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q4">
+            <div class="card-header" >Question 4</div>
+            <div class="card-body">
+                <b>Transcript: </b>ñeh kon tro tôdrong daân soâ
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q4/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q4/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q5">
+            <div class="card-header" >Question 5</div>
+            <div class="card-body">
+                <b>Transcript: </b>lôêm jônang truh huyeân vinh thanh ling lang pônhroh pôm ôêi thu yoêk rim nguoân tôguêm ñôêng kôpal lôêm apung naê ma kon koâng
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q5/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q5/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5" id="q5_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5" id="q5_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5" id="q5_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5" id="q5_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5" id="q5_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5" id="q5_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5" id="q5_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q6">
+            <div class="card-header" >Question 6</div>
+            <div class="card-body">
+                <b>Transcript: </b>minh kôpah noh tram y teâ xa dach pôloêk caân tieâm phong vaccine oeêng aên et vitamin ñinh ky duh adriêng ñe hôyoh ñim ñei 5 sônaêm
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q6/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q6/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6" id="q6_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6" id="q6_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6" id="q6_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6" id="q6_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6" id="q6_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6" id="q6_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6" id="q6_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q7">
+            <div class="card-header" >Question 7</div>
+            <div class="card-body">
+                <b>Transcript: </b>rim tieât hoêk ñôêng duêch daêch pôm ñei tôdrong alöng adriêng hoêk sinh
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q7/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q7/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7" id="q7_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7" id="q7_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7" id="q7_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7" id="q7_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7" id="q7_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7" id="q7_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7" id="q7_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q8">
+            <div class="card-header" >Question 8</div>
+            <div class="card-body">
+                <b>Transcript: </b>ubnd ubmttq vieât nam xa adriêng rim ban nganh pôm söê tômaên tôl maêng bôu cö tröông thoân nhieâm ky 2019  2021 pôloêk an toan trô troê tôdrong
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q8/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q8/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8" id="q8_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8" id="q8_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8" id="q8_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8" id="q8_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8" id="q8_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8" id="q8_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8" id="q8_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q9">
+            <div class="card-header" >Question 9</div>
+            <div class="card-body">
+                <b>Transcript: </b>tôdrong pôgôl ñông ñang thu yok tôdrong ngo hnhei pôgôl ñông kôp uy khul pôgôl rim tôdrong ñei poâk xuoân
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q9/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q9/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q10">
+            <div class="card-header" >Question 10</div>
+            <div class="card-body">
+                <b>Transcript: </b>ñang uy xa vinh hieâp aên tôdrong chi thi 05 tômöt sinh hoat dech lôm rim chi boâ hoâi ñoan theâ
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q10/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q10/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q11">
+            <div class="card-header" >Question 11</div>
+            <div class="card-body">
+                <b>Transcript: </b>lôêm chñeh teh choh jang ba 2 vuê pôloêk jul adreâch ñôêng naêr 1012 truh naêr 20122019 adriêng jöng tômaên truõng thoi ñak jul truh nhö pôm teh jul adreâch truh eêi
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q11/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q11/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q12">
+            <div class="card-header" >Question 12</div>
+            <div class="card-body">
+                <b>Transcript: </b>qua ngo hnhei oeng pôtho khan tôdrong pôm truh ahrrei xa vinh hieâp jôh ñat ñei 1319 tôdrong ñông chöông trinh muc tieâu kôpal the ñak tôjung pôm cham pôlei anao
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q12/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q12/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q12" id="q12_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q12" id="q12_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q12" id="q12_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q12" id="q12_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q12" id="q12_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q12" id="q12_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q12" id="q12_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q13">
+            <div class="card-header" >Question 13</div>
+            <div class="card-body">
+                <b>Transcript: </b>adring rim tôdrong pôtho khan pôjaêng ñông nganh y teâ huyeân tôdrong baêt chu ñoâng phong dôt ji ji khan adring oeng ji grun tônghieât khan kôdih ñông naê ma ñei poâk xuoân jônang truh jôh pôgop tôdrong pôm tôjul ñei ty leâ bôngai ji grun tônghieât lôm tôring huyeân
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q13/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q13/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q13" id="q13_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q13" id="q13_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q13" id="q13_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q13" id="q13_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q13" id="q13_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q13" id="q13_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q13" id="q13_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q14">
+            <div class="card-header" >Question 14</div>
+            <div class="card-body">
+                <b>Transcript: </b>huyeân vinh thanh ôi 952 unh hnam naê ma bôngai lö sônaêm ñat danh hieâu vaên hoa yok 4227
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q14/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q14/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q14" id="q14_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q14" id="q14_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q14" id="q14_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q14" id="q14_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q14" id="q14_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q14" id="q14_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q14" id="q14_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q15">
+            <div class="card-header" >Question 15</div>
+            <div class="card-body">
+                <b>Transcript: </b>boi noh minh hnam ñai ñoan keât ñei tôguêm 40 trieâu ñoâng söê pôm anao lôêm noh mttq tinh tôguêm minh toê hnam 30 trieâu ñoâng nhcsxh trung öông tôguêm 01 toê hnam 50 trieâu ñoâng ksoâê jeân oeêng hnam araê yua mttq vieât nam huyeân tôguêm
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q15/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q15/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q15" id="q15_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q15" id="q15_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q15" id="q15_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q15" id="q15_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q15" id="q15_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q15" id="q15_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q15" id="q15_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q16">
+            <div class="card-header" >Question 16</div>
+            <div class="card-body">
+                <b>Transcript: </b>adring noh rim kôp hoâi noâng daân lôm huyeân jôh adring phong noâng nghieâp oeng pôjing cham pôlei huyeân tôjung pôm lö moâ hinh trinh dieân ôi thu yok in moâ hinh pôtaêm hla nhem an toan thoân ñinh tröông xa vinh kuang moâ hinh pôtaêm amne chi thieân thoân tieân an tieân hoa xa vinh hoa moâ hinh rong yer lôm ñeâm lot sinh hok lôm tôring thi traân vinh thanh xa vinh thinh oeng xa vinh kuang
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q16/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q16/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q16" id="q16_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q16" id="q16_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q16" id="q16_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q16" id="q16_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q16" id="q16_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q16" id="q16_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q16" id="q16_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q17">
+            <div class="card-header" >Question 17</div>
+            <div class="card-body">
+                <b>Transcript: </b>thoi noh pôtho khan minh ksoâ tôdrong pôgloh maê rim hnam tröông waê pônhroh pôm sö tômaên tôl an toan tröông hok la ling lang jôraê deâh tôdrong pôtho khan lôm rim tôdrong phök tap ñông jit ji covid19 lôm heâ thoâng phat thanh ñông hnam tröông pôtho khan rim ñe hyoh hok sinh jö vei veâ sinh anhao ti dach ñông xa phong oeng dung dich anhao ti hloâch khaâu trang oeng bi giao löu anhoâm lö bôngai
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q17/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q17/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q17" id="q17_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q17" id="q17_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q17" id="q17_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q17" id="q17_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q17" id="q17_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q17" id="q17_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q17" id="q17_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q18">
+            <div class="card-header" >Question 18</div>
+            <div class="card-body">
+                <b>Transcript: </b>glong pônhroh ñiê ñaêng naê ma ñoan keât tôjung pôm tôdrong yaêl arih vaên hoa
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q18/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q18/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q18" id="q18_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q18" id="q18_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q18" id="q18_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q18" id="q18_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q18" id="q18_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q18" id="q18_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q18" id="q18_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q19">
+            <div class="card-header" >Question 19</div>
+            <div class="card-body">
+                <b>Transcript: </b>truh dö ôêi ñc mai hoâng sôn phoê tham möu tröông boâ chqs tinh ñc hoâ xuaân anh tuv biê thö huyeân uy biê thö ñang uy quaân sö huyeân
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q19/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q19/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q19" id="q19_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q19" id="q19_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q19" id="q19_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q19" id="q19_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q19" id="q19_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q19" id="q19_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q19" id="q19_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q20">
+            <div class="card-header" >Question 20</div>
+            <div class="card-body">
+                <b>Transcript: </b>lôêm noh ôêi 1357 uênh hnam dônuh yoêk ty leâ 87 ksoêâ uênh hnam dônuh lôêm naê ma kon koâng ôêi 143 uênh hnam jeâê dônuh yoêk ty leâ 76 ksoâê uênh hnam jeêâ dônuh lôêm naê ma kon koâng
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q20/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q20/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q20" id="q20_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q20" id="q20_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q20" id="q20_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q20" id="q20_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q20" id="q20_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q20" id="q20_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q20" id="q20_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q21">
+            <div class="card-header" >Question 21</div>
+            <div class="card-body">
+                <b>Transcript: </b>naê ma waê chu ñoâng anguoân nguoân ñoâ sa in hoâmng ba long hôbo la kumi long ñaâu rim loai tôgum ñoâ sa tinh
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q21/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q21/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q21" id="q21_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q21" id="q21_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q21" id="q21_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q21" id="q21_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q21" id="q21_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q21" id="q21_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q21" id="q21_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q22">
+            <div class="card-header" >Question 22</div>
+            <div class="card-body">
+                <b>Transcript: </b>bôgheâ naêr 02012020 ñang uy quaân sö huyeân vinh thanh pôloêk hoâi nghi pôtho khan thu yoêk tôdrong pôm quoâc phong quaân sö cham pôlei sônaêm 2019 aên leêch nghi quyeât pôgôl tôdrong pôm sônaêm 2020
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q22/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q22/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q22" id="q22_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q22" id="q22_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q22" id="q22_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q22" id="q22_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q22" id="q22_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q22" id="q22_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q22" id="q22_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q23">
+            <div class="card-header" >Question 23</div>
+            <div class="card-body">
+                <b>Transcript: </b>minh kôpah tôdrong naêm ra soat pôtho khan rim tôdrong lôêm tôjul dônuh caâp nhaât uênh hnam dônuh jeâê dônuh lôêm tôring pôm danh sach ñeâ nghi kôêp the bhyt aên rim naê ma boi trô troê quy ñinh
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q23/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q23/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q23" id="q23_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q23" id="q23_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q23" id="q23_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q23" id="q23_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q23" id="q23_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q23" id="q23_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q23" id="q23_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q24">
+            <div class="card-header" >Question 24</div>
+            <div class="card-body">
+                <b>Transcript: </b>ñei aleâ maêng ngo hnhei thu yok thoâng tin lôm tôdrong kinh teâ xa hoâi ñông 53 kon koâng sônaêm 2019 ñei pôlok ñông naêr 01 truh naêr 31102019
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q24/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q24/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q24" id="q24_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q24" id="q24_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q24" id="q24_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q24" id="q24_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q24" id="q24_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q24" id="q24_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q24" id="q24_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q25">
+            <div class="card-header" >Question 25</div>
+            <div class="card-body">
+                <b>Transcript: </b>lôêm tôdrong nhaân sö rim chi boâ chaê yoêk rim ñc duh tieâu chuaân ôêi nöih sôngöm chinh tri tôdrong ñao ñöc naêng lök ñei naê ma gôneh gônôm boi tôdrong ñôêng ñang söê bôêu tômöt chi uy khoa anao adriêng tôdrong alöng trô troê tôdrong lôêm nhaân sö ñei khul thöông vu ñang uy thoâng nhaât
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q25/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q25/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q25" id="q25_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q25" id="q25_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q25" id="q25_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q25" id="q25_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q25" id="q25_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q25" id="q25_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q25" id="q25_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q26">
+            <div class="card-header" >Question 26</div>
+            <div class="card-body">
+                <b>Transcript: </b>trong glong naê ma pôgoêp jeân tôguêm adriêng tuêk bôngot dônuh ñei pôm hôgei
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q26/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q26/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q26" id="q26_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q26" id="q26_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q26" id="q26_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q26" id="q26_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q26" id="q26_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q26" id="q26_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q26" id="q26_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q27">
+            <div class="card-header" >Question 27</div>
+            <div class="card-body">
+                <b>Transcript: </b>thu yok ñông rong trö jeân pôm tinh jônum ñông 60  80 trieâu ñoâng minh klenh rong
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q27/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q27/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q27" id="q27_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q27" id="q27_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q27" id="q27_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q27" id="q27_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q27" id="q27_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q27" id="q27_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q27" id="q27_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q28">
+            <div class="card-header" >Question 28</div>
+            <div class="card-body">
+                <b>Transcript: </b>rim naêr nhong hôdôi chô ñoâ ñông thi traân xuoân vinh sôùnö tech aên naê ma
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q28/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q28/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q28" id="q28_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q28" id="q28_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q28" id="q28_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q28" id="q28_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q28" id="q28_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q28" id="q28_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q28" id="q28_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q29">
+            <div class="card-header" >Question 29</div>
+            <div class="card-body">
+                <b>Transcript: </b>tôdrong yaêl arih ñông naê ma rim tôdrong ñei poâk xuoân
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q29/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q29/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q29" id="q29_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q29" id="q29_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q29" id="q29_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q29" id="q29_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q29" id="q29_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q29" id="q29_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q29" id="q29_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q30">
+            <div class="card-header" >Question 30</div>
+            <div class="card-body">
+                <b>Transcript: </b>pôm tôdrong pôgôl ñôêng ubnd huyeân trung taâm jiêt vuê noâng nghieâp huyeân adriêng khul pôgôl cham pôlei pônhroh tôdrong phong dôt jiêt
+            </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q30/test4.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="wavs/q30/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q30" id="q30_9" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q30" id="q30_8" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q30" id="q30_7" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q30" id="q30_6" value="0" required> 
+                        <span>0</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q30" id="q30_5" value="-1" required>   
+                        <span>-1</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q30" id="q30_4" value="-2" required> 
+                        <span>-2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q30" id="q30_3" value="-3" required>   
+                        <span>-3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+
+            <input type="text" name="formid" value="1" hidden>
+            <input type="text" name="thank" value="Thank you again for participating in this experiment!" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="SUBMIT" id="submitBtn">
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; HCMUT</p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
 </html>
