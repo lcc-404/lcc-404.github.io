@@ -23,7 +23,7 @@
         <form id="theForm" action="{{ form_url }}" method="GET" onsubmit="return preventRepeatedSubmission();">
             {% block form_questions %}{% endblock %}
             <input type="text" name="formid" value="{{ form_id }}" hidden>
-            <input type="text" name="thank" value="再次感谢您参加本实验！" hidden>
+            <input type="text" name="thank" value="再次感谢您参加本次音乐测试实验！" hidden>
             <input class="btn btn-info btn-lg" type="submit" value="提交全部" id="submitBtn">
         </form>
     </div>
