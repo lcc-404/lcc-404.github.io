@@ -2,8 +2,10 @@
 """Generate forms for human evaluation."""
 
 from jinja2 import FileSystemLoader, Environment
-
+import random
 NUM = 3
+RANGE_LEFT = 1
+RANGE_RIGHT = 10
 
 def main():
     """Main function."""
@@ -12,16 +14,18 @@ def main():
     template = env.get_template("mos.html.jinja2")  # 使用mos.html.jinja2和base.html.jinja2
 
     html = template.render(
-        page_title="音乐生成结果评测",
+        page_title = "音乐生成结果评测",
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url="https://script.google.com/macros/s/AKfycbyChyf_QXTnHlCxov3oVmNigd3uz_jd4gJ1ZOiaNm5PhMRYK2K9W2WS_nIckZDFfmJRcg/exec",
-        form_id=1,
+        form_url = "https://script.google.com/macros/s/AKfycbyChyf_QXTnHlCxov3oVmNigd3uz_jd4gJ1ZOiaNm5PhMRYK2K9W2WS_nIckZDFfmJRcg/exec",
+        form_id = 1,
         # 总共NUM=3个问题，每个问题2个选项
-        questions=[{
+        range_list = range(RANGE_LEFT, RANGE_RIGHT)
+        random_list = random.sample(range_list, NUM)
+        questions = [{
                     "title" : "Question " + str(i),
-                    "audio_paths": ["wavs/q"+str(i)+"/test1.wav",
-                                    "wavs/q"+str(i)+"/test2.wav"],
+                    "audio_paths": ["wavs/q"+str(random_list[i])+"/test1.wav",
+                                    "wavs/q"+str(random_list[i])+"/test2.wav"],
                     "name": "q" + str(i)
                     } 
                     for i in range(1,NUM+1)
