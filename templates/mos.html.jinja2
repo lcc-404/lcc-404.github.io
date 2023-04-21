@@ -24,9 +24,6 @@
     {% for question in questions %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
-            <div class="card-body">
-                <b>听以下两段音乐</b>{{question.text}}
-            </div>
             {% for audio_path in question.audio_paths%}
                 <div class="card-body">
                     <span>
