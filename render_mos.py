@@ -13,6 +13,9 @@ def main():
     env = Environment(loader=loader)
     template = env.get_template("mos.html.jinja2")  # 使用mos.html.jinja2和base.html.jinja2
 
+
+    range_list = range(RANGE_LEFT, RANGE_RIGHT)
+    random_list = random.sample(range_list, NUM)
     html = template.render(
         page_title = "音乐生成结果评测",
         # 原来的
@@ -20,12 +23,10 @@ def main():
         form_url = "https://script.google.com/macros/s/AKfycbyChyf_QXTnHlCxov3oVmNigd3uz_jd4gJ1ZOiaNm5PhMRYK2K9W2WS_nIckZDFfmJRcg/exec",
         form_id = 1,
         # 总共NUM=3个问题，每个问题2个选项
-        range_list = range(RANGE_LEFT, RANGE_RIGHT)
-        random_list = random.sample(range_list, NUM)
         questions = [{
                     "title" : "Question " + str(i),
-                    "audio_paths": ["wavs/q"+str(random_list[i])+"/test1.wav",
-                                    "wavs/q"+str(random_list[i])+"/test2.wav"],
+                    "audio_paths": ["wavs/q"+str(random_list[i-1])+"/test1.wav",
+                                    "wavs/q"+str(random_list[i-1])+"/test2.wav"],
                     "name": "q" + str(i)
                     } 
                     for i in range(1,NUM+1)
