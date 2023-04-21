@@ -13,11 +13,9 @@ def main():
 
     html = template.render(
         page_title="音乐生成结果评测",
+        # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url="https://script.google.com/macros/s/AKfycbydvXWDhwOxnxHygKC2GGCx5AbbVB65dDSKSdSXZzyaJZXmqLqCGJDFpVmKZEJCH_sk/exec",
-        # 
-        
-        form_id=1,
+        form_url="https://script.google.com/macros/s/AKfycbxv5miv2EPA05UOW8J-SDhmU8815_bGmtHRsLHnYBRMGhvqJLMnwnEctvY86yFozcA6OQ/exec",
         questions=[{
                     "title" : "Question " + str(i),
                     "audio_paths": ["wavs/q"+str(i)+"/test1.wav","wavs/q"+str(i)+"/test2.wav","wavs/q"+str(i)+"/test3.wav","wavs/q"+str(i)+"/test4.wav","wavs/q"+str(i)+"/test5.wav"],
