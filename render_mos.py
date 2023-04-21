@@ -9,10 +9,10 @@ def main():
     """Main function."""
     loader = FileSystemLoader(searchpath="./templates")
     env = Environment(loader=loader)
-    template = env.get_template("mos.html.jinja2")
+    template = env.get_template("mos.html.jinja2")  # 使用mos.html.jinja2
 
     html = template.render(
-        page_title="MOS Experiment Form 1",
+        page_title="音乐生成结果评测",
         form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
         form_id=1,
         questions=[{

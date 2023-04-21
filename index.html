@@ -40,6 +40,15 @@
     <div class="container" id="form_container">
         <form id="theForm" action="https://script.google.com/macros/s/AKfycbz2o2oo_hfz7Tld2wehD9duMYaD47nwsJKJrza6RO-t-w4eXxi_emmidLYc5z5kR8HxmQ/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
             
+            <div class="form-group">
+                <label for="name">姓名：</label>
+                <input class="form-control" type="text" inputmode="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">电子邮件：</label>
+                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
+            </div>
+            
         <div class="card form-group" id="q1">
             <div class="card-header" >Question 1</div>
             <div class="card-body">
@@ -48,7 +57,7 @@
             
                 <div class="card-body">
                     <span>
-                        <audio controls src="wavs/q1/test1.wav">
+                        <audio controls src="audio/out4.wav">
                             Your browser does not support the audio element.
                         </audio>
                     </span>
@@ -56,7 +65,7 @@
             
                 <div class="card-body">
                     <span>
-                        <audio controls src="wavs/q1/test4.wav">
+                        <audio controls src="audio/out5.wav">
                             Your browser does not support the audio element.
                         </audio>
                     </span>
@@ -66,12 +75,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_9" value="3" required>   
+                        <input class="form-check-input" type="radio" name="q1" id="q1_9" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_9" value="3" required>   
+                        <input class="form-check-input" type="radio" name="q1" id="q1_9" value="4" required>   
                         <span>4</span>
                     </li>
 
