@@ -9,7 +9,7 @@ def main():
     """Main function."""
     loader = FileSystemLoader(searchpath="./templates")
     env = Environment(loader=loader)
-    template = env.get_template("mos.html.jinja2")  # 使用mos.html.jinja2
+    template = env.get_template("mos.html.jinja2")  # 使用mos.html.jinja2和base.html.jinja2
 
     html = template.render(
         page_title="音乐生成结果评测",
