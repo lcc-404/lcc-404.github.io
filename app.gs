@@ -16,5 +16,3 @@ function doGet(e) {
 
 	return ContentService.createTextOutput(params.thank);
 }
-
-/*在Google Sheet电子表格中,将名字，邮箱，和表单ID添加到Google Sheet电子表格的新一行*/
