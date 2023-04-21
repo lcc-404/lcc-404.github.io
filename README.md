@@ -1,7 +1,8 @@
-# An Online Human Evaluation Form Template
+# 音乐生成结果展示与评测
 
-This online form template functions like [Google Forms](https://www.google.com/forms/about/) but is more customizable.
-Please feel free to use this as a template to create your own online human evaluation form.
+This will be my demo about Deep Learning Music Generation which is my graduation project,I'm still working on it!
+
+Theme adapted from minimal by orderedlist.
 
 ### Usage
 
@@ -20,3 +21,7 @@ Please feel free to use this as a template to create your own online human evalu
     - Take a look at **templates** directory and several rendered HTMLs there as example.
     - Modify **render_mos.py** or **render_pair_comparison.py** and generate HTMLs.
     - Commit and push all the modifications back to GitHub.
+
+    # 
+
+
