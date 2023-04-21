@@ -15,7 +15,7 @@ def main():
         page_title="音乐生成结果评测",
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url="https://script.google.com/macros/s/AKfycbxv5miv2EPA05UOW8J-SDhmU8815_bGmtHRsLHnYBRMGhvqJLMnwnEctvY86yFozcA6OQ/exec",
+        form_url="https://script.google.com/macros/s/AKfycbyChyf_QXTnHlCxov3oVmNigd3uz_jd4gJ1ZOiaNm5PhMRYK2K9W2WS_nIckZDFfmJRcg/exec",
         form_id=1,
         # 总共NUM=3个问题，每个问题2个选项
         questions=[{
