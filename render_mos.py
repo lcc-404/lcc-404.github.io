@@ -2,10 +2,9 @@
 """Generate forms for human evaluation."""
 
 from jinja2 import FileSystemLoader, Environment
-import random
+
 NUM = 3
-RANGE_LEFT = 1
-RANGE_RIGHT = 10
+QUESTION_MAX = 30
 
 def main():
     """Main function."""
@@ -13,9 +12,11 @@ def main():
     env = Environment(loader=loader)
     template = env.get_template("mos.html.jinja2")  # 使用mos.html.jinja2和base.html.jinja2
 
+    audio_paths = []
+    for i in range(QUESTION_MAX):
+        path = "wavs/q" + str(i+1)
+        audio_paths.append(path)
 
-    range_list = range(RANGE_LEFT, RANGE_RIGHT)
-    random_list = random.sample(range_list, NUM)
     html = template.render(
         page_title = "音乐生成结果评测",
         # 原来的
@@ -25,8 +26,7 @@ def main():
         # 总共NUM=3个问题，每个问题2个选项
         questions = [{
                     "title" : "Question " + str(i),
-                    "audio_paths": ["wavs/q"+str(random_list[i-1])+"/test1.wav",
-                                    "wavs/q"+str(random_list[i-1])+"/test2.wav"],
+                    "audio_paths": audio_paths,
                     "name": "q" + str(i)
                     } 
                     for i in range(1,NUM+1)

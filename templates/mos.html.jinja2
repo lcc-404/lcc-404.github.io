@@ -15,7 +15,7 @@
             <li>4（比较好)</li>
             <li>5（非常好)</li>
         </ul>
-        请注意，每个问题中出现的音乐可能随机
+        请注意，每个问题中出现的音乐可能随机，虽然我也不想随机但是还随机吗？
     </p>
 {% endblock %}
 
@@ -27,7 +27,12 @@
             {% for audio_path in question.audio_paths%}
                 <div class="card-body">
                     <span>
-                        <audio controls src="{{ audio_path }}">
+                        <audio controls src="{{ audio_path }}/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                    <span>
+                        <audio controls src="{{ audio_path }}/test2.wav">
                             Your browser does not support the audio element.
                         </audio>
                     </span>
