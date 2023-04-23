@@ -27,9 +27,29 @@
                 <input class="form-control" type="text" inputmode="text" name="name" required>
             </div>
             <div class="form-group">
-                <label for="mail">学号：</label>
+                <label for="mail">邮箱：</label>
                 <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
             </div>
+            <div class="form-group">
+                <label for="musiclevel">您的音乐学习水平：（专业/业余/完全不）</label>
+                <input class="form-control" type="text" name="musiclevel">
+                <ul>
+                    <li>
+                        <input class="form-check-input" type="radio" name="musiclevel" required>   
+                        <span>音乐专业学习</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="musiclevel" required>   
+                        <span>业余学习者</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="musiclevel" required>   
+                        <span>完全没学过</span>
+                    </li>
+                 </ul>
+            </div>         
 
             {% block form_questions %}{% endblock %}
             <input type="text" name="formid" value="{{ form_id }}" hidden>
