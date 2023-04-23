@@ -4,7 +4,7 @@
 from jinja2 import FileSystemLoader, Environment
 
 NUM = 3
-QUESTION_MAX = 30
+QUESTION_MAX = 5
 
 def main():
     """Main function."""
