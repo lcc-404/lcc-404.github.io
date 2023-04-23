@@ -21,7 +21,7 @@ def main():
         page_title = "音乐生成结果评测",
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url = "https://script.google.com/macros/s/AKfycbzwBBlf6x4uy9WsDku_COehDwJ5m-bwQMsWre8earA6/dev",
+        form_url = "https://script.google.com/macros/s/AKfycbwoobsZpc084vaiFgpNu5gbOoLT9jyJqWs5UT9OtiAbqa2_pbi3SeOQU8KAeb25pjZHLw/exec",
         form_id = 1,
         # 总共NUM=3个问题，每个问题2个选项
         questions = [{
