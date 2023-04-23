@@ -11,9 +11,4 @@ $('document').ready(function(){
     }
 
     shuffleArray(arr);
-
-    arr.slice(0,20).forEach(function(val,idx){
-        var id = "#q" + val.toString();
-        $(id).remove(); 
-    });
 })
