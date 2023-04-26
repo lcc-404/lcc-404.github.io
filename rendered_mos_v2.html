@@ -39,8 +39,8 @@
         <form id="theForm" action="https://script.google.com/macros/s/AKfycbz004_N4jbOiaE0DBxqdC6rK5E2rJEo_570_NTU5VXgyHD5TdKODXzwbl8Dj5ii_Jm3nQ/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
 
             <div class="form-group">
-                <label for="name">姓名：</label>
-                <input class="form-control" type="text" inputmode="text" name="name" required>
+                <label for="name">姓名或昵称：</label>
+                <input class="form-control" type="text" inputmode="text" placeholder="your name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="mail">邮箱：</label>
@@ -67,14 +67,14 @@
             </div>         
 
             
-    <p>图灵测试：你认为这段音频是人类创作还是机器创作？</p>
+    <h3>图灵测试：你认为这段音频是人类创作还是机器创作？</h3>
     
         <div class="card form-group" id="q1">
             <div class="card-header" >Question 1</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
-                    <audio controls src="">
+                    
+                    <audio controls src="['audios/q1/test1.wav']">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -84,7 +84,7 @@
                 <ul id="score">
                     <li>
                         <input class="form-check-input" type="radio" name="q1_human" id="q1_human" value="human" required>   
-                        <span>人类创作</span>
+                        <span>人类创作?           </span>
                     </li>
 
                     <li>
@@ -99,8 +99,8 @@
             <div class="card-header" >Question 2</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
-                    <audio controls src="">
+                    
+                    <audio controls src="['audios/q2/test1.wav']">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -110,7 +110,7 @@
                 <ul id="score">
                     <li>
                         <input class="form-check-input" type="radio" name="q2_human" id="q2_human" value="human" required>   
-                        <span>人类创作</span>
+                        <span>人类创作?           </span>
                     </li>
 
                     <li>
@@ -125,8 +125,8 @@
             <div class="card-header" >Question 3</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
-                    <audio controls src="">
+                    
+                    <audio controls src="['audios/q3/test1.wav']">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -136,7 +136,7 @@
                 <ul id="score">
                     <li>
                         <input class="form-check-input" type="radio" name="q3_human" id="q3_human" value="human" required>   
-                        <span>人类创作</span>
+                        <span>人类创作?           </span>
                     </li>
 
                     <li>
@@ -151,8 +151,8 @@
             <div class="card-header" >Question 4</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
-                    <audio controls src="">
+                    
+                    <audio controls src="['audios/q4/test1.wav']">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -162,7 +162,7 @@
                 <ul id="score">
                     <li>
                         <input class="form-check-input" type="radio" name="q4_human" id="q4_human" value="human" required>   
-                        <span>人类创作</span>
+                        <span>人类创作?           </span>
                     </li>
 
                     <li>
@@ -175,14 +175,14 @@
     
 
             
-    <p>单个音频样本打分，请从旋律、节奏、和弦三方面进行打分</p>
+    <h3>单个音频样本打分，请从旋律、节奏、和弦三方面进行打分</h3>
     
         <div class="card form-group" id="q5">
             <div class="card-header" >Question 5</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
-                    <audio controls src="/test1.wav">
+                    
+                    <audio controls src="['audios/q5/test1.wav']/test1.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -286,8 +286,8 @@
             <div class="card-header" >Question 6</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
-                    <audio controls src="/test1.wav">
+                    
+                    <audio controls src="['audios/q6/test1.wav']/test1.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -391,8 +391,8 @@
             <div class="card-header" >Question 7</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
-                    <audio controls src="/test1.wav">
+                    
+                    <audio controls src="['audios/q7/test1.wav']/test1.wav">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -494,7 +494,7 @@
     
 
             
-    <p>两段音频对比打分，A/B测试,哪一个更好？</p>
+    <h3>两段音频对比打分，A/B测试,哪一个更好？</h3>
     
         <div class="card form-group" id="q8">
             <div class="card-header" >Question 8</div>

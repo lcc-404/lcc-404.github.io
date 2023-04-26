@@ -25,7 +25,7 @@
             <div class="card-header" >{{ question.title }}</div>
             <div class="card-body">
                 <span>
-                    {% audio_path=question.audio_paths %}
+                    {% set audio_path=question.audio_paths %}
                     <audio controls src="{{ audio_path }}">
                         Your browser does not support the audio element.
                     </audio>
@@ -57,7 +57,7 @@
             <div class="card-header" >{{ question.title }}</div>
             <div class="card-body">
                 <span>
-                    audio_path=question.audio_paths
+                    {% set audio_path=question.audio_paths %}
                     <audio controls src="{{ audio_path }}/test1.wav">
                         Your browser does not support the audio element.
                     </audio>
