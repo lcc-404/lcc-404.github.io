@@ -23,7 +23,7 @@ def main():
         # questions3比较两个音频3道题[8,NUM+1)
         questions1 = [{
                     "title" : "Question " + str(i),
-                    "audio_paths":  ["audios/q"+str(i)+"/test1.wav"],
+                    "audio_paths":  ["audios/q"+str(i)+"/test1.mp3"],
                     "name": "q" + str(i)
                     } 
                     for i in range(1,5)
