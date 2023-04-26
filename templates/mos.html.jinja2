@@ -26,7 +26,7 @@
             <div class="card-body">
                 <span>
                     {% set audio_path=question.audio_paths %}
-                    <audio controls src="{{ audio_path }}">
+                    <audio controls src="{{ audio_path[0] }}">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -36,7 +36,7 @@
                 <ul id="score">
                     <li>
                         <input class="form-check-input" type="radio" name="{{name}}_human" id="{{name}}_human" value="human" required>   
-                        <span>人类创作?           </span>
+                        <span>人类创作           </span>
                     </li>
 
                     <li>
@@ -58,7 +58,7 @@
             <div class="card-body">
                 <span>
                     {% set audio_path=question.audio_paths %}
-                    <audio controls src="{{ audio_path }}/test1.wav">
+                    <audio controls src="{{ audio_path[0] }}">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -68,27 +68,27 @@
                 <p>旋律</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_5" id="{{name}}_5" value="5" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_melody_5" id="{{name}}_melody_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_4" id="{{name}}_4" value="4" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_melody_4" id="{{name}}_melody_4" value="4" required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_3" id="{{name}}_3" value="3" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_melody_3" id="{{name}}_melody_3" value="3" required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_2" id="{{name}}_2" value="2" required> 
+                        <input class="form-check-input" type="radio" name="{{name}}_melody_2" id="{{name}}_melody_2" value="2" required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_1" id="{{name}}_1" value="1" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_melody_1" id="{{name}}_melody_1" value="1" required>   
                         <span>1</span>
                     </li>
 
@@ -99,27 +99,27 @@
                 <p>节奏</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_5" id="{{name}}_5" value="5" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_rhythums_5" id="{{name}}_rhythums_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_4" id="{{name}}_4" value="4" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_rhythums_4" id="{{name}}_rhythums_4" value="4" required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_3" id="{{name}}_3" value="3" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_rhythums_3" id="{{name}}_rhythums_3" value="3" required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_2" id="{{name}}_2" value="2" required> 
+                        <input class="form-check-input" type="radio" name="{{name}}_rhythums_2" id="{{name}}_rhythums_2" value="2" required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_1" id="{{name}}_1" value="1" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_rhythums_1" id="{{name}}_rhythums_1" value="1" required>   
                         <span>1</span>
                     </li>
 
@@ -130,27 +130,27 @@
                 <p>和弦</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_5" id="{{name}}_5" value="5" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_chord_5" id="{{name}}_chord_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_4" id="{{name}}_4" value="4" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_chord_4" id="{{name}}_chord_4" value="4" required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_3" id="{{name}}_3" value="3" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_chord_3" id="{{name}}_chord_3" value="3" required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_2" id="{{name}}_2" value="2" required> 
+                        <input class="form-check-input" type="radio" name="{{name}}_chord_2" id="{{name}}_chord_2" value="2" required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_1" id="{{name}}_1" value="1" required>   
+                        <input class="form-check-input" type="radio" name="{{name}}_chord_1" id="{{name}}_chord_1" value="1" required>   
                         <span>1</span>
                     </li>
 
@@ -165,20 +165,19 @@
     {% for question in questions3 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
-            {% for audio_path in question.audio_paths%}
-                <div class="card-body">
-                    <span>
-                        <audio controls src="{{ audio_path }}/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="{{ audio_path }}/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            {% endfor %}
+            <div class="card-body">
+                {% set audio_path=question.audio_paths %}
+                <span>
+                    <audio controls src="{{ audio_path[0] }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+                <span>
+                    <audio controls src="{{ audio_path[1] }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
             {% set name = question.name %}
             <div class="form-check">
                 <ul id="score">
