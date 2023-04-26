@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block form_questions1 %}
-    <p>图灵测试：你认为这段音频是人类创作还是机器创作？</p>
+    <h3>图灵测试：你认为这段音频是人类创作还是机器创作？</h3>
     {% for question in questions1 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
@@ -36,7 +36,7 @@
                 <ul id="score">
                     <li>
                         <input class="form-check-input" type="radio" name="{{name}}_human" id="{{name}}_human" value="human" required>   
-                        <span>人类创作?</span>
+                        <span>人类创作?           </span>
                     </li>
 
                     <li>
@@ -51,7 +51,7 @@
 
 
 {% block form_questions2 %}
-    <p>单个音频样本打分，请从旋律、节奏、和弦三方面进行打分</p>
+    <h3>单个音频样本打分，请从旋律、节奏、和弦三方面进行打分</h3>
     {% for question in questions2 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
@@ -161,7 +161,7 @@
 {% endblock %}
 
 {% block form_questions3 %}
-    <p>两段音频对比打分，A/B测试,哪一个更好？</p>
+    <h3>两段音频对比打分，A/B测试,哪一个更好？</h3>
     {% for question in questions3 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
