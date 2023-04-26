@@ -3,8 +3,7 @@
 
 from jinja2 import FileSystemLoader, Environment
 
-NUM = 3
-QUESTION_MAX = 5
+NUM = 10
 
 def main():
     """Main function."""
@@ -12,25 +11,38 @@ def main():
     env = Environment(loader=loader)
     template = env.get_template("mos.html.jinja2")  # 使用mos.html.jinja2和base.html.jinja2
 
-    audio_paths = []
-    for i in range(QUESTION_MAX):
-        path = "wavs/q" + str(i+1)
-        audio_paths.append(path)
-
     html = template.render(
         page_title = "音乐生成结果评测",
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url = "https://script.google.com/macros/s/AKfycbwoobsZpc084vaiFgpNu5gbOoLT9jyJqWs5UT9OtiAbqa2_pbi3SeOQU8KAeb25pjZHLw/exec",
-        form_id = 1,
-        # 总共NUM=3个问题，每个问题2个选项
-        questions = [{
+        form_url = "https://script.google.com/macros/s/AKfycbz004_N4jbOiaE0DBxqdC6rK5E2rJEo_570_NTU5VXgyHD5TdKODXzwbl8Dj5ii_Jm3nQ/exec",
+        # form_id = 1,
+        # 总共NUM_x个问题
+        # question1图灵测试单个音频[1,5)，
+        # questions2单个音频打分3道题[5,8)，
+        # questions3比较两个音频3道题[8,NUM+1)
+        questions1 = [{
                     "title" : "Question " + str(i),
-                    "audio_paths": audio_paths,
+                    "audio_paths":  ["audios/q"+str(i)+"/test1.wav"],
                     "name": "q" + str(i)
                     } 
-                    for i in range(1,NUM+1)
+                    for i in range(1,5)
+                    ],
+        questions2 = [{
+                    "title" : "Question " + str(i),
+                    "audio_paths":  ["audios/q"+str(i)+"/test1.wav"],
+                    "name": "q" + str(i)
+                    } 
+                    for i in range(5,8)
+                    ],
+        questions3 = [{
+                    "title" : "Question " + str(i),
+                    "audio_paths":  ["audios/q"+str(i)+"/test1.wav","audios/q"+str(i)+"/test2.wav"],
+                    "name": "q" + str(i)
+                    } 
+                    for i in range(8,NUM+1)
                     ]
+        
     )
     with open("rendered_mos_v2.html", "w", encoding="utf-8") as f:
         f.write(html)

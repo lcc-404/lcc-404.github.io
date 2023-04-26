@@ -30,14 +30,13 @@
             <li>4（比较好)</li>
             <li>5（非常好)</li>
         </ul>
-        请注意，每个问题中出现的音乐可能随机，虽然我也不想随机但是还随机吗？
     </p>
 
         </div>
     </div>
 
     <div class="container" id="form_container">
-        <form id="theForm" action="https://script.google.com/macros/s/AKfycbwoobsZpc084vaiFgpNu5gbOoLT9jyJqWs5UT9OtiAbqa2_pbi3SeOQU8KAeb25pjZHLw/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbz004_N4jbOiaE0DBxqdC6rK5E2rJEo_570_NTU5VXgyHD5TdKODXzwbl8Dj5ii_Jm3nQ/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
 
             <div class="form-group">
                 <label for="name">姓名：</label>
@@ -52,7 +51,7 @@
                 <ul>
                     <li>
                         <input class="form-check-input" type="radio" name="musiclevel" value="profession" required>   
-                        <span>音乐专业学习</span>
+                        <span>专业学习者</span>
                     </li>
 
                     <li>
@@ -68,219 +67,446 @@
             </div>         
 
             
-    
+    <p>图灵测试：你认为这段音频是人类创作还是机器创作？</p>
     
         <div class="card form-group" id="q1">
             <div class="card-header" >Question 1</div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q1/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q1/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q2/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q2/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q3/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q3/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q4/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q4/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q5/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q5/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
             
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_9" value="5" required>   
-                        <span>5</span>
+                        <input class="form-check-input" type="radio" name="q1_human" id="q1_human" value="human" required>   
+                        <span>人类创作</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_8" value="4" required>   
-                        <span>4</span>
+                        <input class="form-check-input" type="radio" name="q1_ai" id="q1_ai" value="ai" required>   
+                        <span>AI生成</span>
                     </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_7" value="3" required>   
-                        <span>3</span>
-                    </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_6" value="2" required> 
-                        <span>2</span>
-                    </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_5" value="1" required>   
-                        <span>1</span>
-                    </li>
-
                 </ul>
             </div>
         </div>
     
         <div class="card form-group" id="q2">
             <div class="card-header" >Question 2</div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q1/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q1/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q2/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q2/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q3/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q3/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q4/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q4/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q5/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q5/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
             
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q2" id="q2_9" value="5" required>   
-                        <span>5</span>
+                        <input class="form-check-input" type="radio" name="q2_human" id="q2_human" value="human" required>   
+                        <span>人类创作</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q2" id="q2_8" value="4" required>   
-                        <span>4</span>
+                        <input class="form-check-input" type="radio" name="q2_ai" id="q2_ai" value="ai" required>   
+                        <span>AI生成</span>
                     </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q2" id="q2_7" value="3" required>   
-                        <span>3</span>
-                    </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q2" id="q2_6" value="2" required> 
-                        <span>2</span>
-                    </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q2" id="q2_5" value="1" required>   
-                        <span>1</span>
-                    </li>
-
                 </ul>
             </div>
         </div>
     
         <div class="card form-group" id="q3">
             <div class="card-header" >Question 3</div>
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3_human" id="q3_human" value="human" required>   
+                        <span>人类创作</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3_ai" id="q3_ai" value="ai" required>   
+                        <span>AI生成</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q4">
+            <div class="card-header" >Question 4</div>
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4_human" id="q4_human" value="human" required>   
+                        <span>人类创作</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4_ai" id="q4_ai" value="ai" required>   
+                        <span>AI生成</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+
+            
+    <p>单个音频样本打分，请从旋律、节奏、和弦三方面进行打分</p>
+    
+        <div class="card form-group" id="q5">
+            <div class="card-header" >Question 5</div>
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="/test1.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <p>旋律</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_5" id="q5_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_4" id="q5_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_3" id="q5_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_2" id="q5_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_1" id="q5_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_5" id="q5_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_4" id="q5_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_3" id="q5_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_2" id="q5_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_1" id="q5_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_5" id="q5_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_4" id="q5_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_3" id="q5_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_2" id="q5_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_1" id="q5_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q6">
+            <div class="card-header" >Question 6</div>
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="/test1.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <p>旋律</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_5" id="q6_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_4" id="q6_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_3" id="q6_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_2" id="q6_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_1" id="q6_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_5" id="q6_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_4" id="q6_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_3" id="q6_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_2" id="q6_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_1" id="q6_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_5" id="q6_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_4" id="q6_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_3" id="q6_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_2" id="q6_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_1" id="q6_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q7">
+            <div class="card-header" >Question 7</div>
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="/test1.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <p>旋律</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_5" id="q7_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_4" id="q7_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_3" id="q7_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_2" id="q7_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_1" id="q7_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_5" id="q7_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_4" id="q7_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_3" id="q7_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_2" id="q7_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_1" id="q7_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_5" id="q7_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_4" id="q7_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_3" id="q7_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_2" id="q7_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_1" id="q7_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    
+
+            
+    <p>两段音频对比打分，A/B测试,哪一个更好？</p>
+    
+        <div class="card form-group" id="q8">
+            <div class="card-header" >Question 8</div>
             
                 <div class="card-body">
                     <span>
-                        <audio controls src="wavs/q1/test1.wav">
+                        <audio controls src="audios/q8/test1.wav/test1.wav">
                             Your browser does not support the audio element.
                         </audio>
                     </span>
                     <span>
-                        <audio controls src="wavs/q1/test2.wav">
+                        <audio controls src="audios/q8/test1.wav/test2.wav">
                             Your browser does not support the audio element.
                         </audio>
                     </span>
@@ -288,51 +514,12 @@
             
                 <div class="card-body">
                     <span>
-                        <audio controls src="wavs/q2/test1.wav">
+                        <audio controls src="audios/q8/test2.wav/test1.wav">
                             Your browser does not support the audio element.
                         </audio>
                     </span>
                     <span>
-                        <audio controls src="wavs/q2/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q3/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q3/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q4/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q4/test2.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                </div>
-            
-                <div class="card-body">
-                    <span>
-                        <audio controls src="wavs/q5/test1.wav">
-                            Your browser does not support the audio element.
-                        </audio>
-                    </span>
-                    <span>
-                        <audio controls src="wavs/q5/test2.wav">
+                        <audio controls src="audios/q8/test2.wav/test2.wav">
                             Your browser does not support the audio element.
                         </audio>
                     </span>
@@ -342,36 +529,110 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q3" id="q3_9" value="5" required>   
-                        <span>5</span>
+                        <input class="form-check-input" type="radio" name="q8_first" id="q8_first" value="first" required>   
+                        <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q3" id="q3_8" value="4" required>   
-                        <span>4</span>
+                        <input class="form-check-input" type="radio" name="q8_second" id="q8_second" value="second" required>   
+                        <span>第二个</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q9">
+            <div class="card-header" >Question 9</div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="audios/q9/test1.wav/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                    <span>
+                        <audio controls src="audios/q9/test1.wav/test2.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="audios/q9/test2.wav/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                    <span>
+                        <audio controls src="audios/q9/test2.wav/test2.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9_first" id="q9_first" value="first" required>   
+                        <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q3" id="q3_7" value="3" required>   
-                        <span>3</span>
+                        <input class="form-check-input" type="radio" name="q9_second" id="q9_second" value="second" required>   
+                        <span>第二个</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q10">
+            <div class="card-header" >Question 10</div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="audios/q10/test1.wav/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                    <span>
+                        <audio controls src="audios/q10/test1.wav/test2.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+                <div class="card-body">
+                    <span>
+                        <audio controls src="audios/q10/test2.wav/test1.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                    <span>
+                        <audio controls src="audios/q10/test2.wav/test2.wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </span>
+                </div>
+            
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10_first" id="q10_first" value="first" required>   
+                        <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q3" id="q3_6" value="2" required> 
-                        <span>2</span>
+                        <input class="form-check-input" type="radio" name="q10_second" id="q10_second" value="second" required>   
+                        <span>第二个</span>
                     </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q3" id="q3_5" value="1" required>   
-                        <span>1</span>
-                    </li>
-
                 </ul>
             </div>
         </div>
     
 
-            <input type="text" name="formid" value="1" hidden>
+            <input type="text" name="formid" value="" hidden>
             <input type="text" name="thank" value="再次感谢您参加本次音乐测试实验！" hidden>
             <input class="btn btn-info btn-lg" type="submit" value="提交全部" id="submitBtn">
         </form>

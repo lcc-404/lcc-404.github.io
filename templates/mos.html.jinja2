@@ -15,14 +15,154 @@
             <li>4（比较好)</li>
             <li>5（非常好)</li>
         </ul>
-        请注意，每个问题中出现的音乐可能随机，虽然我也不想随机但是还随机吗？
     </p>
 {% endblock %}
 
+{% block form_questions1 %}
+    <p>图灵测试：你认为这段音频是人类创作还是机器创作？</p>
+    {% for question in questions1 %}
+        <div class="card form-group" id="{{question.name}}">
+            <div class="card-header" >{{ question.title }}</div>
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="{{ audio_path }}">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            {% set name = question.name %}
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_human" id="{{name}}_human" value="human" required>   
+                        <span>人类创作</span>
+                    </li>
 
-{% block form_questions %}
-    
-    {% for question in questions %}
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_ai" id="{{name}}_ai" value="ai" required>   
+                        <span>AI生成</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+
+{% block form_questions2 %}
+    <p>单个音频样本打分，请从旋律、节奏、和弦三方面进行打分</p>
+    {% for question in questions2 %}
+        <div class="card form-group" id="{{question.name}}">
+            <div class="card-header" >{{ question.title }}</div>
+            <div class="card-body">
+                <span>
+                    audio_path=question.audio_paths
+                    <audio controls src="{{ audio_path }}/test1.wav">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            {% set name = question.name %}
+            <div class="form-check">
+                <p>旋律</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_5" id="{{name}}_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_4" id="{{name}}_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_3" id="{{name}}_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_2" id="{{name}}_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_1" id="{{name}}_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_5" id="{{name}}_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_4" id="{{name}}_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_3" id="{{name}}_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_2" id="{{name}}_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_1" id="{{name}}_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_5" id="{{name}}_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_4" id="{{name}}_4" value="4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_3" id="{{name}}_3" value="3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_2" id="{{name}}_2" value="2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_1" id="{{name}}_1" value="1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block form_questions3 %}
+    <p>两段音频对比打分，A/B测试,哪一个更好？</p>
+    {% for question in questions3 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
             {% for audio_path in question.audio_paths%}
@@ -43,30 +183,14 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_9" value="5" required>   
-                        <span>5</span>
+                        <input class="form-check-input" type="radio" name="{{name}}_first" id="{{name}}_first" value="first" required>   
+                        <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_8" value="4" required>   
-                        <span>4</span>
+                        <input class="form-check-input" type="radio" name="{{name}}_second" id="{{name}}_second" value="second" required>   
+                        <span>第二个</span>
                     </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_7" value="3" required>   
-                        <span>3</span>
-                    </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_6" value="2" required> 
-                        <span>2</span>
-                    </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_5" value="1" required>   
-                        <span>1</span>
-                    </li>
-
                 </ul>
             </div>
         </div>
