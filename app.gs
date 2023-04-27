@@ -12,12 +12,13 @@ function doGet(e) {
 	Sheet.getRange(LastRow+1, 3).setValue(params.formid);
 	Sheet.getRange(LastRow+1, 4).setValue(params.musiclevel);
 
-	Sheet.getRange(LastRow+1, 9).setValue("test");
+	Sheet.getRange(LastRow+1, 9).setValue(params["q5" +"_m"]+params["q5"+"_r"]+params["q5" +"_c"]+params["q5" +"_i"]);
 	Sheet.getRange(LastRow+1, 10).setValue(params["q6" +"_m"]+params["q6"+"_r"]+params["q6" +"_c"]+params["q6" +"_i"]);
+	Sheet.getRange(LastRow+1, 11).setValue(params["q7" +"_m"]+params["q7"+"_r"]+params["q7" +"_c"]+params["q7" +"_i"]);
+	Sheet.getRange(LastRow+1, 12).setValue(params["q8" +"_m"]+params["q8"+"_r"]+params["q8" +"_c"]+params["q8" +"_i"]);
 
 
 	for (var i = 9; i <= 12; i++) {
-		
 		Sheet.getRange(LastRow+1, 4+i).setValue(params["q" + i.toString()]);
 	}
 
