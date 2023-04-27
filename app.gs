@@ -12,7 +12,7 @@ function doGet(e) {
 	Sheet.getRange(LastRow+1, 3).setValue(params.formid);
 	Sheet.getRange(LastRow+1, 4).setValue(params.musiclevel);
 
-	for (var i = 5; i <= 8; i++) {
+	for (var i = 1; i <= 4; i++) {
 		Sheet.getRange(LastRow+1, 4+i).setValue(params["q" + i.toString()]);
 	}
 
