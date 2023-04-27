@@ -19,8 +19,8 @@ def main():
         # form_id = 1,
         # 总共NUM_x个问题
         # question1图灵测试单个音频[1,4]，
-        # questions2单个音频打分3道题[5,8]，
-        # questions3比较两个音频3道题[8,12]
+        # questions2单个音频打分4道题[5,8]，
+        # questions3比较两个音频4道题[8,12]
         questions1 = [{
                     "title" : "Question " + str(i),
                     "audio_paths":  ["audios/q"+str(i)+"/test1.mp3"],
