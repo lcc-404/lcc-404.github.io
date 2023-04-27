@@ -15,7 +15,7 @@ def main():
         page_title = "音乐生成结果评测",
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url = "https://script.google.com/macros/s/AKfycbxg4_TX2stV7jKP_2LnRboQxp9Ak9jesAR3BQEJTbZHnRysEo8uReNh85zNC9E0lBP5rw/exec",
+        form_url = "https://script.google.com/macros/s/AKfycbwkj2-Ou_IDJNwV9GhyzVVI-nCbm7ZzJEfOErkqT9wekzSYxszYwMdWoveJ5f2YHq5pOA/exec",
         # form_id = 1,
         # 总共NUM_x个问题
         # question1图灵测试单个音频[1,4]，
