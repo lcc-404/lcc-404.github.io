@@ -11,12 +11,11 @@ function doGet(e) {
 	Sheet.getRange(LastRow+1, 2).setValue(params.mail);
 	Sheet.getRange(LastRow+1, 3).setValue(params.formid);
 	Sheet.getRange(LastRow+1, 4).setValue(params.musiclevel);
-	var temp1="test";
-	Sheet.getRange(LastRow+1, 5).setValue(params.name);
-	Sheet.getRange(LastRow+1, 6).setValue(temp1);
-	Sheet.getRange(LastRow+1, 7).setValue(temp1);
-	Sheet.getRange(LastRow+1, 8).setValue(temp1);
 	for (var i = 9; i <= 12; i++) {
+		if(i>4 && i<=8){
+			var temp = params["q" + i.toString()+"_m"]+params["q" + i.toString()+"_r"]+params["q" + i.toString()+"_c"]+params["q" + i.toString()+"_i"];
+			Sheet.getRange(LastRow+1, 4+i).setValue(temp);
+		}
 		Sheet.getRange(LastRow+1, 4+i).setValue(params["q" + i.toString()]);
 	}
 
