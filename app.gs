@@ -16,7 +16,7 @@ function doGet(e) {
 		if(i>4 && i<=8){
 			var temp1="test";
 			var temp = params["q" + i.toString()+"_m"]+params["q" + i.toString()+"_r"]+params["q" + i.toString()+"_c"]+params["q" + i.toString()+"_i"];
-			Sheet.getRange(LastRow+1, 4+i).setValue(temp1);
+			Sheet.getRange(LastRow+1, 4+i).setValue(params.name);
 		}
 		else{
 			Sheet.getRange(LastRow+1, 4+i).setValue(params["q" + i.toString()]);
