@@ -3,7 +3,7 @@
 
 from jinja2 import FileSystemLoader, Environment
 
-NUM = 10
+NUM = 12    # 共12个问题
 
 def main():
     """Main function."""
@@ -15,12 +15,12 @@ def main():
         page_title = "音乐生成结果评测",
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
-        form_url = "https://script.google.com/macros/s/AKfycbz004_N4jbOiaE0DBxqdC6rK5E2rJEo_570_NTU5VXgyHD5TdKODXzwbl8Dj5ii_Jm3nQ/exec",
+        form_url = "https://script.google.com/macros/s/AKfycbw9I1Fq9C_2GSDL1Am-tIcn39nwUY1p13Sdv4xeFeAmDZIHOlY8yov20WbsOLqnaqd9ow/exec",
         # form_id = 1,
         # 总共NUM_x个问题
-        # question1图灵测试单个音频[1,5)，
-        # questions2单个音频打分3道题[5,8)，
-        # questions3比较两个音频3道题[8,NUM+1)
+        # question1图灵测试单个音频[1,4]，
+        # questions2单个音频打分3道题[5,8]，
+        # questions3比较两个音频3道题[8,12]
         questions1 = [{
                     "title" : "Question " + str(i),
                     "audio_paths":  ["audios/q"+str(i)+"/test1.mp3"],
@@ -33,14 +33,14 @@ def main():
                     "audio_paths":  ["audios/q"+str(i)+"/test1.wav"],
                     "name": "q" + str(i)
                     } 
-                    for i in range(5,8)
+                    for i in range(5,9)
                     ],
         questions3 = [{
                     "title" : "Question " + str(i),
                     "audio_paths":  ["audios/q"+str(i)+"/test1.wav","audios/q"+str(i)+"/test2.wav"],
                     "name": "q" + str(i)
                     } 
-                    for i in range(8,NUM+1)
+                    for i in range(9,NUM+1)
                     ]
         
     )

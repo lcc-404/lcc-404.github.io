@@ -4,10 +4,13 @@
     <p class="lead">Evaluate the quality of music synthesis</p>
     <hr class="my-4">
     <p>
-        感谢您参加本次实验
+        感谢您参加本次实验，您的评分将作为音乐生成结果质量评估的重要依据。
     </p>
     <p>
-        本毕设使用深度学习模型合成了一些音乐，你需要从旋律、和弦、节奏三个角度对听到的音频进行打分
+        该实验使用深度学习模型合成了一些音乐，请在安静环境下佩戴耳机用谷歌浏览器完成以下问题。
+        第一部分：共4个问题，你需要听两个音频，判断其为人类创作还是由模型合成
+        第二部分：共4个问题，你需要听一个音频，从<b>旋律、和弦、节奏、创新性</b>四个角度，对听到的音频进行打分，评分标准如下
+        第三部分：共4个问题，你需要听两个音频，比较哪一个音频听上去更和谐
         <ul>
             <li>1（非常不好)</li>
             <li>2（比较不好)</li>
@@ -15,11 +18,12 @@
             <li>4（比较好)</li>
             <li>5（非常好)</li>
         </ul>
+        <b>请注意！所有音频文件均使用音乐制谱软件输出，并非人类演奏，请忽略所有音乐的音色。有些旋律可能听起来并不愉快，请注意您的音量：）</b>
     </p>
 {% endblock %}
 
 {% block form_questions1 %}
-    <h3>图灵测试：你认为这段音频是人类创作还是机器创作？</h3>
+    <h3>这段音频是人类创作还是由AI合成？</h3>
     {% for question in questions1 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
@@ -41,7 +45,7 @@
 
                     <li>
                         <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_ai" value="ai" required>   
-                        <span>AI生成</span>
+                        <span>AI合成</span>
                     </li>
                 </ul>
             </div>
@@ -51,7 +55,7 @@
 
 
 {% block form_questions2 %}
-    <h3>单个音频样本打分，请从旋律、节奏、和弦三方面进行打分</h3>
+    <h3>请分别从旋律、节奏、和弦、创新性四个角度进行打分</h3>
     {% for question in questions2 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
@@ -63,7 +67,6 @@
                     </audio>
                 </span>
             </div>
-            {% set name = question.name %}
             <div class="form-check">
                 <p>旋律</p>
                 <ul id="score">
@@ -156,12 +159,44 @@
 
                 </ul>
             </div>
+
+            <div class="form-check">
+                <p>创新性</p>
+                <ul id="innovation">
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_5" value="innovation5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_4" value="innovation4" required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_3" value="innovation3" required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_2" value="innovation2" required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_1" value="innovation1" required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
         </div>
     {% endfor %}
 {% endblock %}
 
 {% block form_questions3 %}
-    <h3>两段音频对比打分，A/B测试,哪一个更好？</h3>
+    <h3>比较两段音频，选出听上去更和谐的一个</h3>
     {% for question in questions3 %}
         <div class="card form-group" id="{{question.name}}">
             <div class="card-header" >{{ question.title }}</div>
