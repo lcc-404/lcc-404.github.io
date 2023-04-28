@@ -28,8 +28,6 @@
         第一部分：共4个问题，你需要听两个音频，判断其为人类创作还是由模型合成
 
         第二部分：共4个问题，你需要听一个音频，从<b>旋律、和弦、节奏、创新性</b>四个角度，对听到的音频进行打分，评分标准如下
-
-        第三部分：共4个问题，你需要听两个音频，比较哪一个音频听上去更和谐
         <ul>
             <li>1（非常不好)</li>
             <li>2（比较不好)</li>
@@ -37,14 +35,16 @@
             <li>4（比较好)</li>
             <li>5（非常好)</li>
         </ul>
-        <b>请注意！所有音频文件均使用音乐制谱软件输出，并非人类演奏，请忽略所有音乐的音色。有些旋律可能听起来并不愉快，请注意您的音量：）</b>
+        第三部分：共4个问题，你需要听两个音频，比较哪一个音频听上去更和谐
+        请注意！所有音频文件均使用音乐制谱软件输出，并非人类演奏，因此您需<b>忽略音色情况</b>。
+        有些旋律可能听起来并不愉快，请注意您的音量：）
     </p>
 
         </div>
     </div>
 
     <div class="container" id="form_container">
-        <form id="theForm" action="https://script.google.com/macros/s/AKfycbwYhCjv6N1OiyM3oG6nFvrzvXYyP43qBzgonMoiXK9bUgm8mqMxzFJZgWZehh83tpWr0w/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbxNDJF3mtzjRcTw7o8-kK2H4XY3oEXAGEDFQ0nENQCrTD2zGlI6N6HTAhOoAnt9TPLk3g/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
 
             <div class="form-group">
                 <label for="name">姓名或昵称：</label>
@@ -91,12 +91,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_human" value="human"  >   
+                        <input class="form-check-input" type="radio" name="q1" id="q1_human" value="human" required >   
                         <span>人类创作</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q1" id="q1_ai" value="ai"  >   
+                        <input class="form-check-input" type="radio" name="q1" id="q1_ai" value="ai"  required>   
                         <span>AI合成</span>
                     </li>
                 </ul>
@@ -117,12 +117,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q2" id="q2_human" value="human"  >   
+                        <input class="form-check-input" type="radio" name="q2" id="q2_human" value="human" required >   
                         <span>人类创作</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q2" id="q2_ai" value="ai"  >   
+                        <input class="form-check-input" type="radio" name="q2" id="q2_ai" value="ai"  required>   
                         <span>AI合成</span>
                     </li>
                 </ul>
@@ -143,12 +143,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q3" id="q3_human" value="human"  >   
+                        <input class="form-check-input" type="radio" name="q3" id="q3_human" value="human" required >   
                         <span>人类创作</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q3" id="q3_ai" value="ai"  >   
+                        <input class="form-check-input" type="radio" name="q3" id="q3_ai" value="ai"  required>   
                         <span>AI合成</span>
                     </li>
                 </ul>
@@ -169,12 +169,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q4" id="q4_human" value="human"  >   
+                        <input class="form-check-input" type="radio" name="q4" id="q4_human" value="human" required >   
                         <span>人类创作</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q4" id="q4_ai" value="ai"  >   
+                        <input class="form-check-input" type="radio" name="q4" id="q4_ai" value="ai"  required>   
                         <span>AI合成</span>
                     </li>
                 </ul>
@@ -190,7 +190,7 @@
             <div class="card-body">
                 <span>
                     
-                    <audio controls src="audios/q5/test1.wav">
+                    <audio controls src="audios/q5/test1.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -200,27 +200,27 @@
                 <p>旋律</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -231,27 +231,27 @@
                 <p>节奏</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_4" value="4" required >   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -262,27 +262,27 @@
                 <p>和弦</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -293,27 +293,27 @@
                 <p>创新性</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_5" value="5" required >   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -327,7 +327,7 @@
             <div class="card-body">
                 <span>
                     
-                    <audio controls src="audios/q6/test1.wav">
+                    <audio controls src="audios/q6/test1.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -337,27 +337,27 @@
                 <p>旋律</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -368,27 +368,27 @@
                 <p>节奏</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_4" value="4" required >   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -399,27 +399,27 @@
                 <p>和弦</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -430,27 +430,27 @@
                 <p>创新性</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_5" value="5" required >   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -464,7 +464,7 @@
             <div class="card-body">
                 <span>
                     
-                    <audio controls src="audios/q7/test1.wav">
+                    <audio controls src="audios/q7/test1.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -474,27 +474,27 @@
                 <p>旋律</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -505,27 +505,27 @@
                 <p>节奏</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_4" value="4" required >   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -536,27 +536,27 @@
                 <p>和弦</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -567,27 +567,27 @@
                 <p>创新性</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_5" value="5" required >   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -601,7 +601,7 @@
             <div class="card-body">
                 <span>
                     
-                    <audio controls src="audios/q8/test1.wav">
+                    <audio controls src="audios/q8/test1.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -611,27 +611,27 @@
                 <p>旋律</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -642,27 +642,27 @@
                 <p>节奏</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_4" value="4" required >   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -673,27 +673,27 @@
                 <p>和弦</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -704,27 +704,27 @@
                 <p>创新性</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_5" value="5" required >   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -742,12 +742,12 @@
             <div class="card-body">
                 
                 <span>
-                    <audio controls src="audios/q9/test1.wav">
+                    <audio controls src="audios/q9/test1.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
                 <span>
-                    <audio controls src="audios/q9/test2.wav">
+                    <audio controls src="audios/q9/test2.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -756,12 +756,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q9" id="q9_first" value="first"  >   
+                        <input class="form-check-input" type="radio" name="q9" id="q9_first" value="first"  required>   
                         <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q9" id="q9_second" value="second"  >   
+                        <input class="form-check-input" type="radio" name="q9" id="q9_second" value="second" required >   
                         <span>第二个</span>
                     </li>
                 </ul>
@@ -773,12 +773,12 @@
             <div class="card-body">
                 
                 <span>
-                    <audio controls src="audios/q10/test1.wav">
+                    <audio controls src="audios/q10/test1.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
                 <span>
-                    <audio controls src="audios/q10/test2.wav">
+                    <audio controls src="audios/q10/test2.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -787,12 +787,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q10" id="q10_first" value="first"  >   
+                        <input class="form-check-input" type="radio" name="q10" id="q10_first" value="first"  required>   
                         <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q10" id="q10_second" value="second"  >   
+                        <input class="form-check-input" type="radio" name="q10" id="q10_second" value="second" required >   
                         <span>第二个</span>
                     </li>
                 </ul>
@@ -804,12 +804,12 @@
             <div class="card-body">
                 
                 <span>
-                    <audio controls src="audios/q11/test1.wav">
+                    <audio controls src="audios/q11/test1.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
                 <span>
-                    <audio controls src="audios/q11/test2.wav">
+                    <audio controls src="audios/q11/test2.mp3">
                         Your browser does not support the audio element.
                     </audio>
                 </span>
@@ -818,43 +818,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="q11" id="q11_first" value="first"  >   
+                        <input class="form-check-input" type="radio" name="q11" id="q11_first" value="first"  required>   
                         <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="q11" id="q11_second" value="second"  >   
-                        <span>第二个</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    
-        <div class="card form-group" id="q12">
-            <div class="card-header" >Question 12</div>
-            <div class="card-body">
-                
-                <span>
-                    <audio controls src="audios/q12/test1.wav">
-                        Your browser does not support the audio element.
-                    </audio>
-                </span>
-                <span>
-                    <audio controls src="audios/q12/test2.wav">
-                        Your browser does not support the audio element.
-                    </audio>
-                </span>
-            </div>
-            
-            <div class="form-check">
-                <ul id="score">
-                    <li>
-                        <input class="form-check-input" type="radio" name="q12" id="q12_first" value="first"  >   
-                        <span>第一个</span>
-                    </li>
-
-                    <li>
-                        <input class="form-check-input" type="radio" name="q12" id="q12_second" value="second"  >   
+                        <input class="form-check-input" type="radio" name="q11" id="q11_second" value="second" required >   
                         <span>第二个</span>
                     </li>
                 </ul>

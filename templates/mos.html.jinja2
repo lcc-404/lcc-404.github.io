@@ -13,8 +13,6 @@
         第一部分：共4个问题，你需要听两个音频，判断其为人类创作还是由模型合成
 
         第二部分：共4个问题，你需要听一个音频，从<b>旋律、和弦、节奏、创新性</b>四个角度，对听到的音频进行打分，评分标准如下
-
-        第三部分：共4个问题，你需要听两个音频，比较哪一个音频听上去更和谐
         <ul>
             <li>1（非常不好)</li>
             <li>2（比较不好)</li>
@@ -22,7 +20,9 @@
             <li>4（比较好)</li>
             <li>5（非常好)</li>
         </ul>
-        <b>请注意！所有音频文件均使用音乐制谱软件输出，并非人类演奏，请忽略所有音乐的音色。有些旋律可能听起来并不愉快，请注意您的音量：）</b>
+        第三部分：共4个问题，你需要听两个音频，比较哪一个音频听上去更和谐
+        请注意！所有音频文件均使用音乐制谱软件输出，并非人类演奏，因此您需<b>忽略音色情况</b>。
+        有些旋律可能听起来并不愉快，请注意您的音量：）
     </p>
 {% endblock %}
 
@@ -43,12 +43,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_human" value="human"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_human" value="human" required >   
                         <span>人类创作</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_ai" value="ai"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_ai" value="ai"  required>   
                         <span>AI合成</span>
                     </li>
                 </ul>
@@ -76,27 +76,27 @@
                 <p>旋律</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_5" value="5" required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_m" id="{{name}}_melody_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -107,27 +107,27 @@
                 <p>节奏</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_4" value="4" required >   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_r" id="{{name}}_rhythums_1" value="1"  required>   
                         <span>1</span>
                     </li>
 
@@ -138,27 +138,27 @@
                 <p>和弦</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_5" value="5"  required>   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_c" id="{{name}}_chord_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -169,27 +169,27 @@
                 <p>创新性</p>
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_5" value="5"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_5" value="5" required >   
                         <span>5</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_4" value="4"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_4" value="4"  required>   
                         <span>4</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_3" value="3"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_3" value="3"  required>   
                         <span>3</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_2" value="2"  > 
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_2" value="2"  required> 
                         <span>2</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_1" value="1"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}_i" id="{{name}}_innovation_1" value="1" required >   
                         <span>1</span>
                     </li>
 
@@ -222,12 +222,12 @@
             <div class="form-check">
                 <ul id="score">
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_first" value="first"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_first" value="first"  required>   
                         <span>第一个</span>
                     </li>
 
                     <li>
-                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_second" value="second"  >   
+                        <input class="form-check-input" type="radio" name="{{name}}" id="{{name}}_second" value="second" required >   
                         <span>第二个</span>
                     </li>
                 </ul>
