@@ -1,0 +1,858 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>音乐生成结果评测</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            
+    <h1 class="display-4">音乐生成结果评估实验</h1>
+    <p class="lead">Evaluate the quality of music synthesis</p>
+    <hr class="my-4">
+    <p>
+        感谢您参加本次实验，您的评分将作为音乐生成结果质量评估的重要依据。
+    </p>
+    <p>
+        该实验使用深度学习模型合成了一些音乐，请在安静环境下佩戴耳机用谷歌浏览器完成以下问题。
+    </p>
+    <p>
+        <b>第一部分：</b>共4个问题，你需要听两个音频，判断其为人类创作还是由模型合成
+    </p>
+    <p>
+        <b>第二部分：</b>共4个问题，你需要听一个音频，从<b>旋律、和弦、节奏、创新性</b>四个角度，对听到的音频进行打分，评分标准如下
+        <ul>
+            <li>1（非常不好)</li>
+            <li>2（比较不好)</li>
+            <li>3（一般)</li>
+            <li>4（比较好)</li>
+            <li>5（非常好)</li>
+        </ul>
+    </p>
+    <p>
+        <b>第三部分：</b>共3个问题，你需要听两个音频，比较哪一个音频听上去更和谐
+    </p>
+    <p>
+        请注意！所有音频文件均使用音乐制谱软件输出，并非人类演奏，因此您需<b>忽略音色情况</b>。
+        有些旋律可能听起来并不愉快，请注意您的音量：）
+    </p>
+
+        </div>
+    </div>
+
+    <div class="container" id="form_container">
+        <form id="theForm" action="https://script.google.com/macros/s/AKfycbxNDJF3mtzjRcTw7o8-kK2H4XY3oEXAGEDFQ0nENQCrTD2zGlI6N6HTAhOoAnt9TPLk3g/exec" method="GET" onsubmit="return preventRepeatedSubmission();">
+
+            <div class="form-group">
+                <label for="name">姓名或昵称：</label>
+                <input class="form-control" type="text" inputmode="text" placeholder="your name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">邮箱：</label>
+                <input class="form-control" type="text" inputmode="email" placeholder="account@example.com" name="mail">
+            </div>
+            <div class="form-group">
+                <label for="musiclevel">您的音乐学习水平：（专业/业余/没学过）</label>
+                <ul>
+                    <li>
+                        <input class="form-check-input" type="radio" name="musiclevel" value="profession" required>   
+                        <span>专业学习者</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="musiclevel" value="amateur" required>   
+                        <span>业余学习者</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="musiclevel" value="newhand" required>   
+                        <span>完全没学过</span>
+                    </li>
+                 </ul>
+            </div>         
+
+            
+    <h3>这段音频是人类创作还是由AI合成？</h3>
+    
+        <div class="card form-group" id="q1">
+            <div class="card-header" >Question 1</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q1/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_human" value="human" required >   
+                        <span>人类创作  </span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q1" id="q1_ai" value="ai"  required>   
+                        <span>  AI合成</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q2">
+            <div class="card-header" >Question 2</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q2/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_human" value="human" required >   
+                        <span>人类创作  </span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q2" id="q2_ai" value="ai"  required>   
+                        <span>  AI合成</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q3">
+            <div class="card-header" >Question 3</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q3/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_human" value="human" required >   
+                        <span>人类创作  </span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q3" id="q3_ai" value="ai"  required>   
+                        <span>  AI合成</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q4">
+            <div class="card-header" >Question 4</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q4/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_human" value="human" required >   
+                        <span>人类创作  </span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q4" id="q4_ai" value="ai"  required>   
+                        <span>  AI合成</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+
+            
+    <h3>请分别从旋律、节奏、和弦、创新性四个角度进行打分</h3>
+    
+        <div class="card form-group" id="q5">
+            <div class="card-header" >Question 5</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q5/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <p>旋律是否具有音乐性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_m" id="q5_melody_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏是否清晰</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_4" value="4" required >   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_r" id="q5_rhythums_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦是否和谐</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_c" id="q5_chord_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>是否具有创新性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_5" value="5" required >   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q5_i" id="q5_innovation_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    
+        <div class="card form-group" id="q6">
+            <div class="card-header" >Question 6</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q6/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <p>旋律是否具有音乐性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_m" id="q6_melody_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏是否清晰</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_4" value="4" required >   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_r" id="q6_rhythums_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦是否和谐</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_c" id="q6_chord_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>是否具有创新性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_5" value="5" required >   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q6_i" id="q6_innovation_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    
+        <div class="card form-group" id="q7">
+            <div class="card-header" >Question 7</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q7/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <p>旋律是否具有音乐性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_m" id="q7_melody_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏是否清晰</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_4" value="4" required >   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_r" id="q7_rhythums_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦是否和谐</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_c" id="q7_chord_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>是否具有创新性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_5" value="5" required >   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q7_i" id="q7_innovation_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    
+        <div class="card form-group" id="q8">
+            <div class="card-header" >Question 8</div>
+            <div class="card-body">
+                <span>
+                    
+                    <audio controls src="audios/q8/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <p>旋律是否具有音乐性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_5" value="5" required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_m" id="q8_melody_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>节奏是否清晰</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_4" value="4" required >   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_r" id="q8_rhythums_1" value="1"  required>   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>和弦是否和谐</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_5" value="5"  required>   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_c" id="q8_chord_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="form-check">
+                <p>是否具有创新性</p>
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_5" value="5" required >   
+                        <span>5</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_4" value="4"  required>   
+                        <span>4</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_3" value="3"  required>   
+                        <span>3</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_2" value="2"  required> 
+                        <span>2</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q8_i" id="q8_innovation_1" value="1" required >   
+                        <span>1</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    
+
+            
+    <h3>比较两段音频，选出听上去更和谐的一个</h3>
+    
+        <div class="card form-group" id="q9">
+            <div class="card-header" >Question 9</div>
+            <div class="card-body">
+                
+                <span>
+                    <audio controls src="audios/q9/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+                <span>
+                    <audio controls src="audios/q9/test2.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_first" value="first"  required>   
+                        <span>第一个</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q9" id="q9_second" value="second" required >   
+                        <span>第二个</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q10">
+            <div class="card-header" >Question 10</div>
+            <div class="card-body">
+                
+                <span>
+                    <audio controls src="audios/q10/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+                <span>
+                    <audio controls src="audios/q10/test2.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_first" value="first"  required>   
+                        <span>第一个</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q10" id="q10_second" value="second" required >   
+                        <span>第二个</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="card form-group" id="q11">
+            <div class="card-header" >Question 11</div>
+            <div class="card-body">
+                
+                <span>
+                    <audio controls src="audios/q11/test1.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+                <span>
+                    <audio controls src="audios/q11/test2.mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </span>
+            </div>
+            
+            <div class="form-check">
+                <ul id="score">
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_first" value="first"  required>   
+                        <span>第一个</span>
+                    </li>
+
+                    <li>
+                        <input class="form-check-input" type="radio" name="q11" id="q11_second" value="second" required >   
+                        <span>第二个</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+
+            <input type="text" name="formid" value="" hidden>
+            <input type="text" name="thank" value="再次感谢您参加本次实验,愿您的生活因音乐而快乐！" hidden>
+            <input class="btn btn-info btn-lg" type="submit" value="提交全部" id="submitBtn">
+        </form>
+    </div>
+
+    <div class="container" style="padding-top: 60px;">
+        <p class="text-center text-muted">&copy; Nankai HLT</p>
+    </div>
+
+    <script type="text/javascript">
+        function preventRepeatedSubmission() {
+            document.getElementById('submitBtn').disabled = true;
+            setTimeout("submitBtn.disabled=false;", 5000);
+            return true;
+        };
+    </script>
+</body>
+
+</html>
