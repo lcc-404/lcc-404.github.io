@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Music Generation DEMO</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pygment_trac.css') }}"  charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"  charset="utf-8">
+
+
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Music Generation demo</h1>
+        <p>1911553,刘成</p>
+        <p class="view"><a href="">View the Project on GitHub</a></p>
+      </header>
+      <section>
+        <h1>介绍</h1>
+
+        <p>本网页为演示demo，同时欢迎您参加主观评测实验，对生成的音乐进行主观打分！<a href="">点击进入</a>.</em></p>
+
+        <p>使用深度学习中的生成对抗网络(WGAN-GP)以及Lakh Pianoroll Dataset数据集，可实现从头开始生成新的音乐</p>
+        <p>如有任何问题和建议，请联系我的邮箱 <a href="mailto:1911553@mail.nankai.edu.cn">1911553@mail.nankai.edu.cn</a>.</p>
+
+        <!-- <h2>一些好的结果</h2>
+        <div class="card-body">
+          <span>
+            <audio controls="" src="./audio/example.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+            </audio>
+          </span>
+        </div> -->
+
+        <h2>开始生成</h2>
+        <p>您可以选择下列生成选项</p>
+        <ol>
+          <li>训练力度</li>
+          <ul><li>10000</li><li>30000</li><li>50000</li></ul>
+          <li>速度</li><ul><li>60</li><li>100</li><li>140</li></ul>
+          <li>乐器组合</li>
+          <ul>
+            <li>InstA:架子鼓，钢琴，古典吉他，贝斯，弦乐</li>
+            <li>InstB:XXX</li>
+            <li>InstC:XXX</li>
+          </ul>
+        </ol>
+        
+        <form method="POST"  action="/compose">
+          <label for="select_trainstep">选择训练次数：</label>
+          <select id="select_trainstep" name="step">
+              <option value="10000">10000</option>
+              <option value="30000">30000</option>
+              <option value="50000">50000</option>
+          </select>
+          <label for="select_tempo">选择速度</label>
+          <select id="select_tempo" name="tempo">
+              <option value="60">60</option>
+              <option value="100">100</option>
+              <option value="100">140</option>
+          </select>
+          <label for="select_inst">选择速度</label>
+          <select id="select_inst" name="inst">
+              <option value="instA">instA</option>
+              <option value="instB">instB</option>
+              <option value="instC">instC</option>
+          </select>
+          <input type="submit" value="Compose">
+      </form>
+        <blockquote>
+          <p>音乐是比一切智慧、一切哲学更高的启示。——贝多芬</p>
+        </blockquote>
+  </div>
+</body>

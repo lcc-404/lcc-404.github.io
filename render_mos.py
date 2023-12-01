@@ -16,6 +16,7 @@ def main():
         # 原来的
         # form_url="https://script.google.com/macros/s/AKfycbzApm3cSoTRMbhTaEgd3c3VtpV9nRP1DUqxXQLsyVz9uAtTrSty/exec",
         form_url = "https://script.google.com/macros/s/AKfycbxNDJF3mtzjRcTw7o8-kK2H4XY3oEXAGEDFQ0nENQCrTD2zGlI6N6HTAhOoAnt9TPLk3g/exec",
+        
         # form_id = 1,
         # 总共NUM_x个问题
         # question1图灵测试单个音频[1,4]，
@@ -44,7 +45,7 @@ def main():
                     ]
         
     )
-    with open("rendered_mos_v2.html", "w", encoding="utf-8") as f:
+    with open("index.html", "w", encoding="utf-8") as f:
         f.write(html)
 
 
